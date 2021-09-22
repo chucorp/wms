@@ -250,7 +250,7 @@ class TestReceptionScreen(Common):
         # with the reception screen
         for move in self.picking.move_lines:
             move.quantity_done = move.product_uom_qty
-        self.picking.action_done()
+        self.picking._action_done()
         self.assertEqual(self.picking.state, "done")
         # Continue the work on the reception screen by receiving some qty:
         # an error should be raised
